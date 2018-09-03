@@ -1,5 +1,5 @@
 /initenv.bat
-/build
+/site
 
 # for pyCharm
 **/.idea/workspace.xml

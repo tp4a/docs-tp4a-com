@@ -1,0 +1,17 @@
+site_name: Teleport 文档
+copyright: TP4A Team.
+site_author: Apex Liu
+nav:
+  - 首页: index.md
+  - 安装&升级: install.md
+  - 服务端配置:
+    - 配置文件: config.md
+    - Nginx: nginx.md
+  - 管理员手册: admin_guide.md
+  - 用户手册: user_guide.md
+  - 开发手册: develop.md
+  - 贡献者: contributor.md
+  - 捐赠: donate.md
+  - FAQ: faq.md
+theme: readthedocs
+
