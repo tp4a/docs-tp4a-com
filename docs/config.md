@@ -4,7 +4,7 @@
 
 teleport 配置文件位于 `%INSTDIR%/data/etc` 目录下。服务端包含两个配置文件： `core.ini` 和 `web.ini`，其中，core.ini用于核心服务，web.ini用于WEB服务。
 
-**修改完配置文件后，需要重启 teleport 服务方可生效，重启方式详见[这里](install.md#server-control)。**
+**注意：修改完配置文件后，需要重启 teleport 服务方可生效，重启方式详见[这里](install.md#server-control)。**
 
 ### 核心服务配置文件 <a id="core-ini"></a>core.ini
 
@@ -59,9 +59,9 @@ bind-ip=0.0.0.0
 bind-port=52389
 ```
 
-#### replay-path
+#### 录像文件存放路径 <a id="replay-path"></a>replay-path
 
-因为在teleport服务工作过程中，占用磁盘空间较大的是录像回放文件，因此可以根据需要将录像文件存放到别的挂载的磁盘上。可以通过修改 `replay-path` 来进行设定。
+因为在teleport服务工作过程中，占用磁盘空间较大的是录像回放文件，容易导致 /usr 空间不足，因此可以根据需要将录像文件存放到别的挂载的磁盘上。可以通过修改 `replay-path` 来进行设定。
 
 #### 禁用某个协议
 
