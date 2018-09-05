@@ -11,6 +11,7 @@ nav:
      - 登录: guide_login.md
      - 资产管理: guide_asset.md
      - 用户管理: guide_user.md
+     - 运维: guide_ops.md
      - 审计: guide_audit.md
      - 系统管理: guide_system.md
   - 客户端助手: assist.md
@@ -18,7 +19,18 @@ nav:
   - 贡献者: contributor.md
   - 捐赠: donate.md
   - FAQ: faq.md
-theme: readthedocs
+
+theme:
+  name: null
+  custom_dir: 'themes/readthedocs'
+  static_templates:
+    - 404.html
+
+  include_search_page: true
+  search_index_only: false
+
+  highlightjs: true
+  hljs_languages: []
 
 markdown_extensions:
   - extra
@@ -28,3 +40,5 @@ markdown_extensions:
   - smarty
   - footnotes
 
+repo_name: GitHub
+repo_url: https://github.com/eomsoft/teleport
