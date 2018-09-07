@@ -4,7 +4,7 @@ Teleport项目现在接受捐赠。如果您觉得teleport对您有所帮助，�
 
 ![donate](img/donate.png)
 
-## 提供帮助
+## 其他帮助
 
 除了捐赠之外，您还可以以其他方式对teleport项目提供帮助，包括但不限于：
 

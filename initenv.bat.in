@@ -1,2 +1,2 @@
 @echo off
-path=%path%;C:\apps\Miniconda3\Scripts
+path=C:\apps\Miniconda3;C:\apps\Miniconda3\Scripts;%path%
