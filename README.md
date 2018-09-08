@@ -1,6 +1,6 @@
 ## 简介
 
-本项目用于生成 [docs.tp4a.com]() 的内容，是 teleport 项目的在线说明文档。
+本项目用于生成 [docs.tp4a.com](http://docs.tp4a.com/) 的内容，是 teleport 项目的在线说明文档。
 
 Teleport是一款简单易用的堡垒机系统，具有小巧、易用的特点，支持 RDP/SSH/SFTP/Telnet 协议的远程连接和审计管理。
 
