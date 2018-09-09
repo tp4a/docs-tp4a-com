@@ -1,2 +1,0 @@
-@echo off
-path=C:\apps\Miniconda3;C:\apps\Miniconda3\Scripts;%path%
