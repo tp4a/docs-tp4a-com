@@ -121,12 +121,13 @@ core-server-rpc=http://127.0.0.1:52080/rpc
 
 Teleport支持MySQL数据库（当然也支持MariaDB）。这里以MySQL为例进行说明。要使用MySQL数据库，需要先为teleport创建库并授权。以MySQL数据库的管理员身份在命令行工具中执行：
 
-**注意：数据库的字符集必须是 utf-8 ，否则会出现乱码。**
+**注意：数据库的字符集必须是 utf-8 ，否则会出现乱码，或者初始化表数据时会失败。**
 
 ```sql
 > create database teleport default character set utf8 collate utf8_general_ci;
-> grant all privileges on teleport to 'teleport'@'127.0.0.1' identified by 'password';
+> grant all privileges on teleport.* to teleport@127.0.0.1 identified by 'password';
 > flush privileges;
 ```
 
 请注意表名、用户名与密码等要与 web.ini 中的设置一致。修改 `web.ini`，去掉 `; type=sqlite` 前面的注释符号，并改为 `type=mysql`。
+
