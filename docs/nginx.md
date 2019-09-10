@@ -63,5 +63,8 @@ Teleport服务端默认WEB服务端口为7190，可以在TP服务器前面架设
 
 其中，`ssl_certificate_key` 和 `ssl_certificate` 是你的服务端证书的私钥和服务端证书。如果你不知道如何获取一份服务端证书，那么去了解一下 [Let's Encrypt](https://letsencrypt.org/) 将会是一个不错的开端。
 
+使用CentOS 7的注意：如果默认使用系统自带的firewall防火墙，需要做以下两件事：
+1、打开80端口可访问：firewall-cmd --zone=public --zone=public --add-port=80/tcp --permanent
+2、setsebool http_can_network_connect on -P
 
 
