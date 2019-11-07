@@ -123,10 +123,20 @@ Teleport支持MySQL数据库（当然也支持MariaDB）。这里以MySQL为例�
 
 **注意：数据库的字符集必须是 utf-8 ，否则会出现乱码，或者初始化表数据时会失败。**
 
-```sql
-> create database teleport default character set utf8 collate utf8_general_ci;
-> grant all privileges on teleport.* to teleport@127.0.0.1 identified by 'password';
-> flush privileges;
+```mysql
+-- 对于MySQL5.x：
+CREATE DATABASE teleport DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+GRANT ALL PRIVILEGES ON teleport.* TO teleport @127.0.0.1 IDENTIFIED BY 'password';
+FLUSH PRIVILEGES;
+
+-- 对于MySQL8：
+-- 注意：认证方式选择 mysql_native_password 还是 caching_sha2_password，要根据实际配置进行，不设置的话就使用MySQL的默认值。
+CREATE DATABASE teleport DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE USER `teleport`@`localhost` IDENTIFIED BY 'password';
+-- CREATE USER `teleport`@`localhost` IDENTIFIED WITH mysql_native_password BY 'password';
+-- CREATE USER `teleport`@`localhost` IDENTIFIED WITH caching_sha2_password BY 'password';
+GRANT ALL PRIVILEGES ON teleport.* TO `teleport`@`localhost`;
+FLUSH PRIVILEGES;
 ```
 
 请注意表名、用户名与密码等要与 web.ini 中的设置一致。修改 `web.ini`，去掉 `; type=sqlite` 前面的注释符号，并改为 `type=mysql`。
