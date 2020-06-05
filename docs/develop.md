@@ -3,7 +3,7 @@
 **前提条件：**
 
 ```
-代码位置：git@github.com:eomsoft/teleport.git
+代码位置：git@github.com:tp4a/teleport.git
 python环境：32位的python3.7版本
 开发环境： pytharm
 ```
@@ -15,7 +15,7 @@ python环境：32位的python3.7版本
 ```
 cd E:\git_workspace\teleport
 
-git clone git@github.com:eomsoft/teleport.git
+git clone git@github.com:tp4a/teleport.git
 
 ```
 
