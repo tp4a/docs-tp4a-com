@@ -7,6 +7,7 @@ nav:
   - 服务端配置:
     - 配置文件: config.md
     - Nginx配置: nginx.md
+    - 防火墙配置: firewall.md
   - 用户手册:
      - 登录: guide_login.md
      - 资产管理: guide_asset.md
