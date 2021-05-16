@@ -65,7 +65,7 @@ source /opt/rh/devtoolset-8/enable
 
 - 安装其他必要的工具和开发库
 ```bash
-yum install -y git
+yum install -y git zip unzip
 yum install -y libffi-devel zlib-devel
 ```
 
