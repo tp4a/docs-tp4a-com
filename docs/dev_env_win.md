@@ -1,14 +1,14 @@
-## 前端web开发环境
+本文主要讲解如何在 Windows 平台搭建 teleport 的 WEB 开发/调试 环境。
 
-**基本信息**
+## 基本信息
 
 - 代码位置：`git@github.com:tp4a/teleport.git`
 - python环境：**32位**的python3.7版本
 - 开发环境：`PyCharm`
 
-**搭建过程：**
+## 搭建过程
 
-1、拉取代码
+拉取代码
 
 ```
 cd E:\git_workspace\teleport

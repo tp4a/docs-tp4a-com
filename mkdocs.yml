@@ -18,6 +18,7 @@ nav:
   - 客户端助手: assist.md
   - 开发手册:
      - Windows开发环境: dev_env_win.md
+     - Linux开发环境: dev_env_linux.md
      - 调查崩溃问题: dev_core_dump.md
   - 贡献者: contributor.md
   - 支持 Teleport: support.md
