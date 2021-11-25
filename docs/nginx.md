@@ -33,7 +33,7 @@ Teleport服务端默认WEB服务端口为7190，可以在TP服务器前面架设
 
 ## 配置为HTTPS
 
-为提升完全性，可以将 nginx 配置为 https 方式访问。要这样做，需要将 nginx  的配置文件做如下修改：
+为提升安全性，可以将 nginx 配置为 https 方式访问。要这样做，需要将 nginx  的配置文件做如下修改：
 
 ```nginx
 # ...其他内容...
@@ -45,7 +45,7 @@ Teleport服务端默认WEB服务端口为7190，可以在TP服务器前面架设
     ssl on;
     ssl_certificate_key path/to/your/server-private-key.pem
     ssl_certificate path/to/your/server-cert.pem
-    
+
     location / {
       proxy_set_header Host $host;
       proxy_set_header X-Real-IP $remote_addr;
@@ -63,8 +63,15 @@ Teleport服务端默认WEB服务端口为7190，可以在TP服务器前面架设
 
 其中，`ssl_certificate_key` 和 `ssl_certificate` 是你的服务端证书的私钥和服务端证书。如果你不知道如何获取一份服务端证书，那么去了解一下 [Let's Encrypt](https://letsencrypt.org/) 将会是一个不错的开端。
 
-使用CentOS 7的注意：如果默认使用系统自带的firewall防火墙，需要做以下两件事：
-1、打开80端口可访问：firewall-cmd --zone=public --zone=public --add-port=80/tcp --permanent
-2、setsebool http_can_network_connect on -P
+!!! Note "注意"
+    在 CentOS 7 中，如果使用系统自带的 firewall 防火墙，需要做以下两件事：
 
+    1. 开放 80 端口
+    ```shell
+    firewall-cmd --zone=public --add-port=80/tcp --permanent
+    ```
 
+    2. 如果系统开启了SELinux安全策略，需要允许http接入：
+    ```shell
+    setsebool -P http_can_network_connect on
+    ```

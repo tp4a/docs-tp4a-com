@@ -1,4 +1,5 @@
 site_name: Teleport 文档
+site_url: https://docs.tp4a.com
 copyright: TP4A Team.
 site_author: Apex Liu
 nav:
@@ -33,18 +34,21 @@ theme:
   static_templates:
     - 404.html
 
-  include_search_page: true
+  # include_search_page: true
 
   highlightjs: true
   hljs_languages: []
 
 markdown_extensions:
-  - extra
-  - tables
-  - toc
+  # - extra
+  # - tables
+  # - toc
+  - admonition
   - fenced_code
-  - smarty
+  # - smarty
   - footnotes
+  - pymdownx.superfences
+  # - codehilite
 
 repo_name: GitHub
 repo_url: https://github.com/tp4a/teleport

@@ -4,7 +4,8 @@
 
 teleport 配置文件位于 `%INSTDIR%/data/etc` 目录下。服务端包含两个配置文件： `core.ini` 和 `web.ini`，其中，core.ini用于核心服务，web.ini用于WEB服务。
 
-**注意：修改完配置文件后，需要重启 teleport 服务方可生效，重启方式详见[这里](install.md#server-control)。**
+!!! Note
+    注意：修改完配置文件后，需要重启 teleport 服务方可生效，重启方式详见[这里](install.md#server-control)。
 
 ### 核心服务配置文件 <a id="core-ini"></a>core.ini
 
@@ -121,7 +122,8 @@ core-server-rpc=http://127.0.0.1:52080/rpc
 
 Teleport支持MySQL数据库（当然也支持MariaDB）。这里以MySQL为例进行说明。要使用MySQL数据库，需要先为teleport创建库并授权。以MySQL数据库的管理员身份在命令行工具中执行：
 
-**注意：数据库的字符集必须是 utf-8 ，否则会出现乱码，或者初始化表数据时会失败。**
+!!! Note
+    注意：数据库的字符集必须是 utf-8 ，否则会出现乱码，或者初始化表数据时会失败。
 
 ```mysql
 -- 对于MySQL5.x：
